@@ -4,25 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #average{
-            margin: 16px 0;
-            padding: 10px;
-            background-color: #f0f0f0;
-            border: 1px solid #04167c;
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color:#04167c
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css" >
 </head>
 <body>
-    <h2>Notas Asignatura Front-End</h2>
+    <h2>Seguimiento de clasificaciones de Estudiantes</h2>
     <div id="average">Promedio General del curso: N/A</div>
     <form id="studentForm">
       <div>
-        <label for="name">Nombre :</label>
+        <label for="name">Nombre: </label>
         <input type="text" id="name" required>
     </div>
     <div>
@@ -30,7 +19,7 @@
         <input type="text" id="lastName" required>
     </div>
     <div>
-        <label for="grade">Nota: </label>
+        <label for="grade">Clasificación (1.0 - 7.0): </label>
         <input type="number" id="grade" step="0.1" min="1" max="7" required>
     </div>
     <div>
@@ -44,7 +33,7 @@
    <tr>
     <th>Nombre </th>
     <th>Apellido</th>
-    <th>Nota</th>
+    <th>Clasificación</th>
     <th>Fecha</th>
    </tr>
  </thead>
