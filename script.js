@@ -1,19 +1,34 @@
 const students=[]
 const tableBody=document.querySelector("#studentsTable tbody");
 const averageDiv=document.getElementById("average");
-document.getElementById("studentForm").addEventListener("submit",function (e){
- e.preventDefault();
+document.getElementById("studentForm").addEventListener("submit", function (e) {
+  e.preventDefault();
 
- const name=document.getElementById("name").value.trim();
- const lastName=document.getElementById("lastName").value.trim();
- const grade=parseFloat(document.getElementById("grade").value);
- const date=document.getElementById("date").value;
+  const name = document.getElementById("name").value.trim();
+  const lastName = document.getElementById("lastName").value.trim();
+  const grade = parseFloat(document.getElementById("grade").value);
+  const date = document.getElementById("date").value;
 
- if(!name || !lastName || isNaN(grade) || grade<1 || grade>7){
-    alert("Error al ingresar Datos")
-     return
- }  
- 
+  if (!name) {
+    alert("Por favor, ingresa el nombre del estudiante.");
+    return;
+  }
+  if (!lastName) {
+    alert("Por favor, ingresa el apellido del estudiante.");
+    return;
+  }
+  if (isNaN(grade)) {
+    alert("Por favor, ingresa una nota válida.");
+    return;
+  }
+  if (grade < 1 || grade > 7) {
+    alert("La nota debe estar entre 1 y 7.");
+    return;
+  }
+  if (!date) {
+    alert("Por favor, ingresa la fecha.");
+    return;
+  }
  const student={name,lastName,grade,date};
 
  students.push(student);
