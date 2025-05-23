@@ -4,44 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clasificaciones</title>
-    <link rel="stylesheet" href="styles.css" >
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h2>Seguimiento de clasificaciones de Estudiantes</h2>
     <div id="average">Promedio General del curso: N/A</div>
+
     <form id="studentForm">
+      <input type="hidden" id="editingIndex" value="">
+
       <div>
         <label for="name">Nombre: </label>
         <input type="text" id="name" required oninvalid="this.setCustomValidity('Por favor, ingrese su nombre')" oninput="this.setCustomValidity('')">
-    </div>
-    <div>
+      </div>
+
+      <div>
         <label for="lastName">Apellido: </label>
         <input type="text" id="lastName" required oninvalid="this.setCustomValidity('Por favor, ingrese su apellido')" oninput="this.setCustomValidity('')">
-    </div>
-    <div>
+      </div>
+
+      <div>
         <label for="grade">Clasificación (1.0 - 7.0): </label>
         <input type="number" id="grade" step="0.1" min="1" max="7" required oninvalid="this.setCustomValidity('Por favor, ingrese una nota correcta')" oninput="this.setCustomValidity('')">
-    </div>
-    <div>
+      </div>
+
+      <div>
         <label for="date">Fecha: </label>
-        <input type="date" id="date" rrequired oninvalid="this.setCustomValidity('Por favor, ingrese una fecha correcta')" oninput="this.setCustomValidity('')">
-    </div>
-    <button type="submit">Guardar Alumno</button>
-</form>    
-<table id="studentsTable" border="1" cellpadding="8" cellspacing="0">
- <thead>
-   <tr>
-    <th>Nombre </th>
-    <th>Apellido</th>
-    <th>Clasificación</th>
-    <th>Fecha</th>
-    <th>Acciones</th>
-   </tr>
- </thead>
- <tbody>
-    <!--Datos de las filas de cada alumno-->
- </tbody>
-</table>
+        <input type="date" id="date" required oninvalid="this.setCustomValidity('Por favor, ingrese una fecha correcta')" oninput="this.setCustomValidity('')">
+      </div>
+
+      <button type="submit">Guardar Alumno</button>
+    </form>    
+
+    <table id="studentsTable" border="1" cellpadding="8" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Clasificación</th>
+          <th>Fecha</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Filas de estudiantes -->
+      </tbody>
+    </table>
 
     <script src="script.js"></script>
 </body>
