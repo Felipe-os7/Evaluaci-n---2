@@ -134,3 +134,30 @@ th {
   td:nth-of-type(3)::before { content: "Nota"; }
   td:nth-of-type(4)::before { content: "Fecha"; }
 }
+
+.delete-btn {
+  background-color: #883127;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #883127;
+}
+
+.edit-btn {
+  background-color: #3280b4c4;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background-color: #3280b4c4;
+}
